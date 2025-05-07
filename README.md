@@ -10,7 +10,7 @@
 ## Results
 ### 
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://miro.medium.com/v2/resize:fit:720/format:webp/1*SdXRP8f2Lhin89Tht_GRIA.jpeg)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/King-Rafat/Transformer_Rehabilitation/blob/main/Images/First_Diagram.pdf)
 
 ### Dependencies
 - python>=3.7
