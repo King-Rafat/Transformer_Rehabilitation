@@ -4,13 +4,13 @@
 * We use a Curve-based Data Aggregation for feature augmentation then fuse it with a Transformer architecture to assess quality of rehabilitation rehabilitation exercise.
 
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://github.com/King-Rafat/Transformer_Rehabilitation/blob/main/Images/First_Diagram.pdf)
+![Screenshot](https://github.com/King-Rafat/Transformer_Rehabilitation/blob/main/Images/First_Diagram.pdf)
 
 
 ## Results
 ### 
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.]()
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://miro.medium.com/v2/resize:fit:720/format:webp/1*SdXRP8f2Lhin89Tht_GRIA.jpeg)
 
 ### Dependencies
 - python>=3.7
