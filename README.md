@@ -4,7 +4,7 @@
 * We use a Curve-based Data Aggregation for feature augmentation then fuse it with a Transformer architecture to assess quality of rehabilitation rehabilitation exercise.
 
 
-![Screenshot](https://github.com/King-Rafat/Transformer_Rehabilitation/blob/main/Images/First_Diagram.pdf)
+![Screenshot](https://github.com/King-Rafat/Transformer_Rehabilitation/blob/main/Images/skeleton%20diagram-Page-4.jpg)
 
 
 ## Results
