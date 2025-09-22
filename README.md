@@ -1,6 +1,6 @@
 # Transformer Network for the Assessment of Physical Rehabilitation Exercise
 
-* Accepted at  | [Paper](https://aclanthology.org/2023.emnlp-main.618/) | [Model]() | [Dataset](https://huggingface.co/datasets/PeacefulData/HyPoradise-v1-GigaSpeech)
+* Under Review  | [Paper](https://aclanthology.org/2023.emnlp-main.618/) | [Model]() | [Dataset](https://huggingface.co/datasets/PeacefulData/HyPoradise-v1-GigaSpeech)
 * We use a Curve-based Data Aggregation for feature augmentation then fuse it with a Transformer architecture to assess quality of rehabilitation rehabilitation exercise.
 
 
