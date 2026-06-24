@@ -18,7 +18,7 @@
 </div>
 
 <p align="center">
-  <img src="graphical_abstract_viz" alt="Method overview" width="85%">
+  <img src="graphical_abstract_viz.pdf" alt="Method overview" width="85%">
 </p>
 
 ---
