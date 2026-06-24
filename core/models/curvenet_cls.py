@@ -11,7 +11,7 @@ from .curvenet_util import *
 
 
 curve_config = {
-        'default': [[50, 5], [50, 5], None, None],
+        'default': [[15, 5], [15, 5], None, None],
         'long':  [[10, 30], None,  None,  None]
     }
 
@@ -25,11 +25,11 @@ class CurveNet(nn.Module):
         self.lpfa = LPFA(9, additional_channel, k=k, mlp_num=1, initial=True)
 
         # encoder #* default=0.08-0.08-0.08-0.16
-        self.cic11 = CIC(npoint=117, radius=0.08, k=k, in_channels=additional_channel, output_channels=32, bottleneck_ratio=2, mlp_num=1, curve_config=curve_config[setting][0])
-        self.cic12 = CIC(npoint=117, radius=0.08, k=k, in_channels=32, output_channels=64, bottleneck_ratio=4, mlp_num=1, curve_config=curve_config[setting][0])
+        self.cic11 = CIC(npoint=25, radius=0.08, k=k, in_channels=additional_channel, output_channels=32, bottleneck_ratio=2, mlp_num=1, curve_config=curve_config[setting][0])
+        self.cic12 = CIC(npoint=25, radius=0.08, k=k, in_channels=32, output_channels=64, bottleneck_ratio=4, mlp_num=1, curve_config=curve_config[setting][0])
         
-        self.cic21 = CIC(npoint=117, radius=0.08, k=k, in_channels=64, output_channels=128, bottleneck_ratio=2, mlp_num=1, curve_config=curve_config[setting][1])
-        self.cic22 = CIC(npoint=117, radius=0.16, k=k, in_channels=128, output_channels=256, bottleneck_ratio=4, mlp_num=1, curve_config=curve_config[setting][1])
+        self.cic21 = CIC(npoint=25, radius=0.08, k=k, in_channels=64, output_channels=128, bottleneck_ratio=2, mlp_num=1, curve_config=curve_config[setting][1])
+        self.cic22 = CIC(npoint=25, radius=0.16, k=k, in_channels=128, output_channels=256, bottleneck_ratio=4, mlp_num=1, curve_config=curve_config[setting][1])
 
         self.conv0 = nn.Sequential(
             nn.Conv1d(256, 256, kernel_size=1, bias=False),
