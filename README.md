@@ -149,9 +149,9 @@ pip install torch numpy scipy scikit-learn matplotlib jupyter
 
 | Dataset | Joints | Sensor | Task | Official source | Processed splits |
 |---------|--------|--------|------|-----------------|------------------|
-| **KIMORE** | 18 | Kinect v2 | Quality score (regression) | [vrai.dii.univpm.it](https://vrai.dii.univpm.it/content/kimore-dataset) | _TODO: add link_ |
-| **UI-PRMD** | 22 | Vicon / Kinect | Quality score (regression) | [webpages.uidaho.edu/ui-prmd](https://webpages.uidaho.edu/ui-prmd/) | _TODO: add link_ |
-| **IRDS** | 25 | Kinect v2 | Correct / incorrect (classification) | [MDPI Data 6(5):46](https://www.mdpi.com/2306-5729/6/5/46) | _TODO: add link_ |
+| **KIMORE** | 25 | Kinect v2 | Quality score (regression) | [vrai.dii.univpm.it](https://vrai.dii.univpm.it/content/kimore-dataset) | _TODO: add link_ |
+| **UI-PRMD** | 39 | Vicon / Kinect | Quality score (regression) | [webpages.uidaho.edu/ui-prmd](https://webpages.uidaho.edu/ui-prmd/) | _TODO: add link_ |
+| **IRDS** | 29 | Kinect v2 | Correct / incorrect (classification) | [MDPI Data 6(5):46](https://www.mdpi.com/2306-5729/6/5/46) | _TODO: add link_ |
 
 Download each dataset from the official source above and point the loaders in `Data_Proc/` to your local paths. The exact train/val/test splits used in the paper can be downloaded from the **Processed splits** column (drop in a Google Drive / Hugging Face / Zenodo link once uploaded).
 
@@ -160,7 +160,7 @@ Download each dataset from the official source above and point the loaders in `D
 All pretrained weights (KIMORE, UI-PRMD, IRDS) are available here:
 
 **➡️ [Download checkpoints (Kimore)](https://drive.google.com/drive/folders/12CEkE6Z0dYunCl7B6ug7lAQKW-eIY43S?usp=sharing)**
-**➡️ [Download checkpoints (UI-PRMD)]()**
+**➡️ [Download checkpoints (UI-PRMD)](https://drive.google.com/drive/folders/1OYHRXdKbRFrz_n0ftXFQwaHr4KAMT7xd?usp=sharing)**
 Download and place them under `checkpoints/`.
 
 ### Run
