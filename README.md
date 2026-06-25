@@ -188,7 +188,6 @@ This work builds on several open repositories:
 
 
 
-> Update the year, volume, pages, and DOI once the final IEEE Xplore entry is live.
 
 ---
 
