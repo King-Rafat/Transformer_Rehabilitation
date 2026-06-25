@@ -123,7 +123,7 @@ Transformer_Rehabilitation/
 ├── core/                  # CurveNet — curve-based point aggregation
 ├── Data_Proc/             # Dataset loading & preprocessing (KIMORE etc.)
 ├── Images/                # Figures & diagrams
-├── Rehabilitation.ipynb   # Training, inference, validation, model architecture
+├── Rehabilitation.ipynb   # Training, inference, validation, model architecture, Data processing for IRDS and UI-PRMD
 ├── Rehab_T-SNE.ipynb      # t-SNE visualization of learned embeddings
 └── README.md
 ```
@@ -159,8 +159,9 @@ Download each dataset from the official source above and point the loaders in `D
 
 All pretrained weights (KIMORE, UI-PRMD, IRDS) are available here:
 
-**➡️ [Download checkpoints (Google Drive)](TODO: add Drive link)**
-
+**➡️ [Download checkpoints (Kimore)](https://drive.google.com/drive/folders/12CEkE6Z0dYunCl7B6ug7lAQKW-eIY43S?usp=sharing)**
+**➡️ [Download checkpoints (UI-PRMD)]()**
+**➡️ [Download checkpoints (Kimore)](https://drive.google.com/drive/folders/12CEkE6Z0dYunCl7B6ug7lAQKW-eIY43S?usp=sharing)**
 Download and place them under `checkpoints/`.
 
 ### Run
@@ -186,21 +187,7 @@ This work builds on several open repositories:
 
 ---
 
-## 📚 Citation
 
-If you use this code, model, or dataset splits, please cite:
-
-```bibtex
-@article{rafat2026pointcloud,
-  title   = {A Point Cloud Transformer for Remote Monitoring and Automated
-             Assessment of Physical Rehabilitation Exercises},
-  author  = {Rafat, Kazi and Hossain, Md. Ismail and Elahi, M M Lutfe and
-             Momen, Sifat and Rahman, Fuad and Mohammed, Nabeel and Rahman, Shafin},
-  journal = {IEEE Journal of Biomedical and Health Informatics (JBHI)},
-  year    = {2026},
-  note    = {Manuscript ID: JBHI-04660-2025}
-}
-```
 
 > Update the year, volume, pages, and DOI once the final IEEE Xplore entry is live.
 
