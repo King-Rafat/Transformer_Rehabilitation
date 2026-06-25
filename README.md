@@ -161,7 +161,6 @@ All pretrained weights (KIMORE, UI-PRMD, IRDS) are available here:
 
 **➡️ [Download checkpoints (Kimore)](https://drive.google.com/drive/folders/12CEkE6Z0dYunCl7B6ug7lAQKW-eIY43S?usp=sharing)**
 **➡️ [Download checkpoints (UI-PRMD)]()**
-**➡️ [Download checkpoints (Kimore)](https://drive.google.com/drive/folders/12CEkE6Z0dYunCl7B6ug7lAQKW-eIY43S?usp=sharing)**
 Download and place them under `checkpoints/`.
 
 ### Run
