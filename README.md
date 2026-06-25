@@ -149,8 +149,8 @@ pip install torch numpy scipy scikit-learn matplotlib jupyter
 
 | Dataset | Joints | Sensor | Task | Official source | Processed splits |
 |---------|--------|--------|------|-----------------|------------------|
-| **KIMORE** | 25 | Kinect v2 | Quality score (regression) | [vrai.dii.univpm.it](https://vrai.dii.univpm.it/content/kimore-dataset) | _TODO: add link_ |
-| **UI-PRMD** | 39 | Vicon / Kinect | Quality score (regression) | [webpages.uidaho.edu/ui-prmd](https://webpages.uidaho.edu/ui-prmd/) | _TODO: add link_ |
+| **KIMORE** | 25 | Kinect v2 | Quality score (regression) | [Data](https://pubmed.ncbi.nlm.nih.gov/31217121/) | _TODO: add link_ |
+| **UI-PRMD** | 39 | Vicon / Kinect | Quality score (regression) | [Data](https://github.com/avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises) | _TODO: add link_ |
 | **IRDS** | 29 | Kinect v2 | Correct / incorrect (classification) | [MDPI Data 6(5):46](https://www.mdpi.com/2306-5729/6/5/46) | _TODO: add link_ |
 
 Download each dataset from the official source above and point the loaders in `Data_Proc/` to your local paths. The exact train/val/test splits used in the paper can be downloaded from the **Processed splits** column (drop in a Google Drive / Hugging Face / Zenodo link once uploaded).
