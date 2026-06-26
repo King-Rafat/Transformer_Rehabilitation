@@ -116,18 +116,95 @@ Transmits only skeletal coordinates (25 joints × 3 × 4 bytes = **300 bytes/fra
 
 ---
 
+### 📡 Remote-monitoring footprint
+ 
+Transmits only skeletal coordinates (25 joints × 3 × 4 bytes = **300 bytes/frame**), so the stream is **~72 kbps**, with an estimated **~50–70 ms** end-to-end latency. Easily fits a typical home broadband uplink.
+ 
+---
+ 
 ## 📁 Repository structure
-
+ 
 ```
 Transformer_Rehabilitation/
+├── train.py               # entrypoint: train on one exercise
+├── eval.py                # entrypoint: evaluate a checkpoint (MAD/RMSE/MSE/MAPE)
+├── config.py              # YAML + CLI argument loader
+├── configs/
+│   └── default.yaml       # all hyperparameters and paths
+├── models/                # network definition
+│   ├── temporal_model.py  #   TemporalModel (CurveNet encoder + axial transformer)
+│   ├── transformer.py     #   axial self-attention blocks
+│   └── embedder.py        #   Fourier positional embedder
+├── data/
+│   └── datasets.py        # KIMORE + UI-PRMD loaders -> DataLoaders
+├── engine/
+│   ├── trainer.py         # training loop
+│   └── evaluator.py       # metric computation
+├── utils/
+│   ├── metrics.py         # MAD, RMSE, MSE, MAPE
+│   └── seed.py            # reproducibility
 ├── core/                  # CurveNet — curve-based point aggregation
-├── Data_Proc/             # Dataset loading & preprocessing (KIMORE etc.)
-├── Images/                # Figures & diagrams
-├── Rehabilitation.ipynb   # Training, inference, validation, model architecture, Data processing for IRDS and UI-PRMD
+├── Data_Proc/             # KIMORE preprocessing (Data_Loader)
+├── Images/                # figures & diagrams
+├── Rehabilitation.ipynb   # original all-in-one notebook 
 ├── Rehab_T-SNE.ipynb      # t-SNE visualization of learned embeddings
+├── requirements.txt
 └── README.md
 ```
+ 
+---
+ 
+## 🚀 Getting started
+ 
+### Dependencies
+ 
+```bash
+python >= 3.7
+pytorch  +  cudatoolkit >= 11.2   # may work on lower
+```
+ 
+```bash
+git clone https://github.com/King-Rafat/Transformer_Rehabilitation.git
+cd Transformer_Rehabilitation
+pip install torch numpy scipy scikit-learn matplotlib jupyter
+```
 
+### Train
+ 
+All settings live in `configs/default.yaml`; override any of them on the command line.
+ 
+```bash
+# Train on KIMORE exercise 5 (writes checkpoints/Kimore_ex5.pt)
+python train.py --config configs/default.yaml --ex Kimore_ex5 --epoch 2000
+ 
+# Train on a UI-PRMD exercise
+python train.py --config configs/default.yaml --ex UI_ex1 --epoch 2000 --lr 0.0001
+```
+ 
+The best checkpoint (lowest validation MAD) is saved to `--save_dir` (default `./checkpoints/`) as `<ex>.pt`.
+ 
+### Evaluate
+ 
+```bash
+# Evaluate a trained checkpoint -> prints MAD / RMSE / MSE / MAPE
+python eval.py --config configs/default.yaml --ex Kimore_ex5 \
+    --checkpoint checkpoints/Kimore_ex5.pt
+```
+ 
+### Configuration
+ 
+| Field | Meaning | Default |
+|-------|---------|---------|
+| `ex` | exercise/dataset (`Kimore_ex1..5`, `UI_ex1..10`) | `Kimore_ex5` |
+| `lr` | learning rate | `0.0001` |
+| `epoch` | training epochs | `2000` |
+| `batch_size` | batch size | `1` |
+| `save_dir` | where checkpoints are written | `./checkpoints` |
+| `checkpoint` | weights loaded by `eval.py` | `./checkpoints/Kimore_ex5.pt` |
+ 
+> The original all-in-one `Rehabilitation.ipynb` is kept for reference and for the
+> interpretability / t-SNE plots (`Rehab_T-SNE.ipynb`).
+ 
 ---
 
 ## 🚀 Getting started
