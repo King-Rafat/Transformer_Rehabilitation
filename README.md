@@ -168,6 +168,16 @@ git clone https://github.com/King-Rafat/Transformer_Rehabilitation.git
 cd Transformer_Rehabilitation
 pip install torch numpy scipy scikit-learn matplotlib jupyter
 ```
+### Smoke Test
+```bash
+pip install -r requirements.txt
+
+python -c "import train, eval, models, data, engine, utils; print('imports ok')"
+
+python train.py --ex Kimore_ex5 --epoch 2
+
+python eval.py --ex Kimore_ex5 --checkpoint checkpoints/Kimore_ex5.pt
+```
 
 ### Train
  
@@ -190,7 +200,8 @@ The best checkpoint (lowest validation MAD) is saved to `--save_dir` (default `.
 python eval.py --config configs/default.yaml --ex Kimore_ex5 \
     --checkpoint checkpoints/Kimore_ex5.pt
 ```
- 
+
+
 ### Configuration
  
 | Field | Meaning | Default |
