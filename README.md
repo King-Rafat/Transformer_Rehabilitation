@@ -272,11 +272,26 @@ This work builds on several open repositories:
 - Processing KIMORE: [STGCN-rehab](https://github.com/fokhruli/STGCN-rehab)
 - Loading & processing UI-PRMD: [A-Deep-Learning-Framework](https://github.com/avakanski/A-Deep-Learning-Framework-for-Assessing-Physical-Rehabilitation-Exercises)
 
----
+## 📚 Citation
+ 
+If you use this code, model, or dataset splits, please cite:
+ 
+```bibtex
+@ARTICLE{11576525,
+  author={Rafat, Kazi and Hossain, Md. Ismail and Elahi, M M Lutfe and Momen, Sifat and Rahman, Fuad and Mohammed, Nabeel and Rahman, Shafin},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={A Point Cloud Transformer for Remote Monitoring and Automated Assessment of Physical Rehabilitation Exercises}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-13},
+  keywords={Modeling;Joints;Timing;Learning (artificial intelligence);Transformers;Clouds;Conferences;Computers;Measurement;Computer vision;Physical Rehabilitation;Automatic Evaluation;Transformer Assessment;Point Cloud Analysis},
+  doi={10.1109/JBHI.2026.3706938}}
 
-
-
-
+```
+ 
+> Update the year, volume, pages, and DOI once the final IEEE Xplore entry is live.
+ 
 ---
 
 <div align="center">
